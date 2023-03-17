@@ -72,7 +72,7 @@ class MyWidget extends StatelessWidget {
                 ),
 
 
-
+                
                 SizedBox(height: 6),
                 Container(
                   width: 343,
