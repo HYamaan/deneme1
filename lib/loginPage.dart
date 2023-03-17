@@ -1,5 +1,5 @@
 // Tip: tap on the down arrow to format the code.
-
+// merhaba hakan
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -138,14 +138,9 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                           SizedBox(width: 15),
-                          Text(
-                            "Ex: abc@example.com",
-                            style: TextStyle(
-                              color: Color(0xffc7c7c7),
-                              fontSize: 16,
-                              fontStyle: FontStyle.italic,
-                            ),
-                          ),
+                          Material(
+                            color: Colors.transparent,
+                          )
                         ],
                       ),
                     ),
@@ -272,7 +267,7 @@ class LoginPage extends StatelessWidget {
                             elevation: 2,
                           ),
                           child: const Text(
-                            'Button',
+                            'LOGİN',
                             textAlign: TextAlign.center,
                           ),
                         ),
