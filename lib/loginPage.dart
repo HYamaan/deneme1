@@ -174,6 +174,7 @@ class LoginPage extends StatelessWidget {
                           width: 1.50,
                         ),
                       ),
+                      
                       padding: const EdgeInsets.symmetric(
                         horizontal: 22,
                         vertical: 18,
