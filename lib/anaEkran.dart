@@ -1,6 +1,8 @@
 // Tip: tap on the down arrow to format the code.
 
 import 'package:flutter/material.dart';
+import 'MusicEkrani.dart';
+
 //comment
 void main() {
   runApp(
@@ -17,30 +19,35 @@ class AnaEkran extends StatelessWidget {
   Widget build(BuildContext context) {
     // Paste it here.
     // Replace return Text(...); with return YourWidget(...);
-
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Container(
       width: 390,
       height: 844,
       color: Color(0xff2f254d),
-      padding: const EdgeInsets.only(
-        left: 22,
-        right: 24,
-        top: 54,
-        bottom: 43,
-      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: 22,
-            height: 19.25,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: Colors.white,
+              child: AppBar(
+            backgroundColor: Colors.transparent,
+            iconTheme: IconThemeData(
+              color: Colors.black, // <-- SEE HERE
             ),
-          ),
+            centerTitle: true,
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MusicEkrani()),
+                    );
+                  },
+                  icon: Icon(Icons.menu))
+            ],
+          )),
           SizedBox(height: 48.36),
           Container(
             width: 314,
@@ -102,67 +109,41 @@ class AnaEkran extends StatelessWidget {
           ),
           SizedBox(height: 48.36),
           Container(
-            width: 212.42,
-            height: 24.31,
+            width: 344,
+            height: 50,
             child: Row(
               mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  width: 14,
-                  height: 16,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
+                new RotationTransition(
+                  turns: new AlwaysStoppedAnimation(180 / 360),
+                  child: new SizedBox(
+                    child:
+                        Icon(Icons.play_arrow, size: 30, color: Colors.white),
                   ),
                 ),
-                SizedBox(width: 321.35),
-                Container(
-                  width: 24,
-                  height: 16,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: FlutterLogo(size: 16.00156021118164),
-                ),
-                SizedBox(width: 321.35),
-                Container(
-                  width: 22,
-                  height: 24.31,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
+                new RotationTransition(
+                  turns: new AlwaysStoppedAnimation(180 / 360),
+                  child: new SizedBox(
+                    child:
+                        Icon(Icons.play_arrow, size: 30, color: Colors.white),
                   ),
                 ),
-                SizedBox(width: 321.35),
-                Transform.rotate(
-                  angle: -3.14,
-                  child: Container(
-                    width: 24,
-                    height: 16,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: FlutterLogo(size: 16.00156021118164),
-                  ),
+                SizedBox(
+                  child: Icon(Icons.play_arrow, size: 50, color: Colors.white),
                 ),
-                SizedBox(width: 321.35),
-                Transform.rotate(
-                  angle: -3.14,
-                  child: Container(
-                    width: 14,
-                    height: 16,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.white,
-                    ),
+                SizedBox(
+                  child: Row(
+                    children: [
+                      Icon(Icons.play_arrow, size: 30, color: Colors.white),
+                      Icon(Icons.play_arrow, size: 30, color: Colors.white),
+                    ],
                   ),
                 ),
               ],
             ),
           ),
-          SizedBox(height: 48.36),
           Container(
             width: 344,
             height: 25,
@@ -242,7 +223,7 @@ class AnaEkran extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 48.36),
+          SizedBox(height: 31),
           Container(
             width: 57,
             height: 54,

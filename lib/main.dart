@@ -1,224 +1,399 @@
 // Tip: tap on the down arrow to format the code.
-
+// merhaba hakan
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'welcome.dart';
 import 'loginPage.dart';
+
 void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Center(child: MyWidget()),
+        resizeToAvoidBottomInset: false,
+        body: Center(child: LoginPage()),
       ),
     ),
   );
 }
-class MyWidget extends StatelessWidget {
+
+class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     // Paste it here.
     // Replace return Text(...); with return YourWidget(...);
 
     return Container(
-      width: 390,
-      height: 844,
+      width: 395,
+      height: 846,
       color: Color(0xff453a72),
-      padding: const EdgeInsets.only(left: 14, right: 31, top: 35, bottom: 210, ),
-      child: Column(
+      padding: const EdgeInsets.only(
+        top: 2,
+      ),
+      child: Row(
         mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children:[
-
-          SizedBox(height: 21.14),
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
           Container(
-            width: 192.03,
-            height: 99.18,
-            child: Stack(
-              children:[Container(
-                width: 192.03,
-                height: 99.18,
-              ),
-              ],
+            width: 390,
+            height: 844,
+            color: Color(0xff272727),
+            padding: const EdgeInsets.only(
+              left: 19,
+              right: 20,
+              top: 70,
+              bottom: 109,
             ),
-          ),
-          SizedBox(height: 21.14),
-          SizedBox(
-            width: 143,
-            height: 48,
-            child: Text(
-              "Sign Up",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color(0xff7b34fe),
-                fontSize: 40,
-              ),
-            ),
-          ),
-          SizedBox(height: 21.14),
-          Container(
-            height: 82,
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text(
-                  "Email",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                  ),
-                ),
-
-
-                
-                SizedBox(height: 6),
+              children: [
                 Container(
-                  width: 343,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Color(0xff565dfa), width: 1.50, ),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16, ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children:[
+                  width: 195.54,
+                  height: 99.18,
+                  child: Stack(
+                    children: [
                       Container(
-                        width: 19.20,
-                        height: 19.18,
+                        width: 195.54,
+                        height: 99.18,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
-                          color: Color(0xff565dfa),
+                          color: Colors.black,
                         ),
                       ),
-                      SizedBox(width: 15),
-                      Text(
-                        "Ex: abc@example.com",
-                        style: TextStyle(
-                          color: Color(0xffc7c7c7),
-                          fontSize: 16,
-                          fontStyle: FontStyle.italic,
+                      Positioned.fill(
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Container(
+                            width: 195.54,
+                            height: 99.18,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: FlutterLogo(size: 99.17963409423828),
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
-              ],
-            ),
-          ),
-          SizedBox(height: 21.14),
-          Container(
-            height: 82,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text(
-                  "Your Name",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
+                SizedBox(height: 10.82),
+                Material(
+                  color: Colors.transparent,
+                  child: Text(
+                    "Login",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Color(0xff7b34fe),
+                      fontSize: 40,
+                    ),
                   ),
                 ),
-                SizedBox(height: 6),
+                SizedBox(height: 10.82),
                 Container(
-                  width: 343,
+                  width: 196,
+                  height: 26,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: Color(0xff565dfa), width: 1.50, ),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 16, ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children:[
-                      Container(
-                        width: 16.60,
-                        height: 19.06,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: Color(0xff565dfa), width: 0.60, ),
-                          color: Color(0xff565dfa),
-                        ),
-                      ),
-                      SizedBox(width: 17),
-                      Text(
-                        "Ex. Saul Ramirez",
-                        style: TextStyle(
-                          color: Color(0xffc7c7c7),
-                          fontSize: 16,
-                          fontStyle: FontStyle.italic,
-                        ),
-                      ),
-                    ],
+                    borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-              ],
-            ),
-          ),
-          SizedBox(height: 21.14),
-          Container(
-            height: 81,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text(
-                  "Your Password",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          Container(
-            padding: const EdgeInsets.only(left: 138, right: 123),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children:[
+                SizedBox(height: 10.82),
                 SizedBox(
-                  width: 84,
-                  height: 36,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) =>  LoginPage()),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shadowColor: const Color(0xFFA5A5A5),
-                      backgroundColor: const Color(0xFF5C69E5),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                      textStyle: GoogleFonts.getFont(
+                  width: 350,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Email',
+                      labelStyle: GoogleFonts.getFont(
                         'Roboto',
-                        color: Colors.white,
-                        fontSize: 13,
+                        color: Colors.grey,
+                        fontSize: 14,
                       ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4),
+                      floatingLabelStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: Colors.blue,
+                        fontSize: 14,
                       ),
-                      elevation: 2,
+                      hintText: 'abcd@gmail.com',
+                      hintStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: const Color(0xFF7F7F7F),
+                        fontSize: 14,
+                      ),
+                      hintMaxLines: 1,
+                      errorStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: const Color(0xFFFF0000),
+                        fontSize: 12,
+                      ),
+                      errorMaxLines: 1,
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      isDense: true,
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 16),
+                      focusColor: Colors.blue,
+                      hoverColor: const Color(0x197F7F7F),
+                      errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF0000),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Colors.blue,
+                          width: 1.5,
+                        ),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF0000),
+                        ),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0x197F7F7F),
+                        ),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0x809E9E9E),
+                          width: 1.5,
+                        ),
+                      ),
+                      alignLabelWithHint: true,
                     ),
-                    child: const Text(
-                      'Button',
-                      textAlign: TextAlign.center,
+                    keyboardType: TextInputType.text,
+                    style: GoogleFonts.getFont(
+                      'Roboto',
+                      color: Colors.black,
+                      fontSize: 14,
                     ),
-
+                    textAlign: TextAlign.left,
+                    autocorrect: false,
+                    cursorHeight: 14,
+                    cursorRadius: const Radius.circular(2),
+                    cursorColor: const Color(0xFF5C69E5),
                   ),
-                )
+                ),
+                SizedBox(height: 20.82),
+                SizedBox(
+                  width: 350,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      labelStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: Colors.grey,
+                        fontSize: 14,
+                      ),
+                      floatingLabelStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: Colors.blue,
+                        fontSize: 14,
+                      ),
+                      hintText: '*******',
+                      hintStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: const Color(0xFF7F7F7F),
+                        fontSize: 14,
+                      ),
+                      hintMaxLines: 1,
+                      errorStyle: GoogleFonts.getFont(
+                        'Roboto',
+                        color: const Color(0xFFFF0000),
+                        fontSize: 12,
+                      ),
+                      errorMaxLines: 1,
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      isDense: true,
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 16),
+                      focusColor: Colors.blue,
+                      hoverColor: const Color(0x197F7F7F),
+                      errorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF0000),
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Colors.blue,
+                          width: 1.5,
+                        ),
+                      ),
+                      focusedErrorBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0xFFFF0000),
+                        ),
+                      ),
+                      disabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0x197F7F7F),
+                        ),
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(4.0),
+                        borderSide: const BorderSide(
+                          color: Color(0x809E9E9E),
+                          width: 1.5,
+                        ),
+                      ),
+                      alignLabelWithHint: true,
+                    ),
+                    keyboardType: TextInputType.text,
+                    style: GoogleFonts.getFont(
+                      'Roboto',
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.left,
+                    autocorrect: false,
+                    cursorHeight: 14,
+                    cursorRadius: const Radius.circular(2),
+                    cursorColor: const Color(0xFF5C69E5),
+                  ),
+                ),
+
+                SizedBox(height: 10.82),
+
+                //Remember me
+                Container(
+                  width: 115,
+                  height: 38,
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Remember me",
+                        style: TextStyle(
+                          color: Color(0xfff8f1f1),
+                          fontSize: 14,
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 250,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 13,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                          child: SizedBox(
+                        width: 84,
+                        height: 36,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Welcome()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shadowColor: const Color(0xFFA5A5A5),
+                            backgroundColor: const Color(0xFF5C69E5),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 8),
+                            textStyle: GoogleFonts.getFont(
+                              'Roboto',
+                              color: Colors.white,
+                              fontSize: 13,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            elevation: 2,
+                          ),
+                          child: const Text(
+                            'LOGİN',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: 342,
+                  height: 22,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 1,
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 18.68,
+                        height: 17.65,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 10.0, right: 30.0),
+                        child: Text(
+                          "Dont have an account?",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 108.68,
+                        height: 107.65,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignUp()),
+                            );
+                          },
+                          child: Text(
+                            "Sign Up",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xffdd1b60),
+                              fontSize: 22,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10.82),
               ],
             ),
           ),
