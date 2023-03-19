@@ -91,8 +91,6 @@ class MusicEkrani extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
-                                    child:
-                                        FlutterLogo(size: 54.117645263671875),
                                   ),
                                   SizedBox(width: 6.76),
                                   Column(

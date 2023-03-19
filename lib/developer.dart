@@ -38,7 +38,6 @@ class Developer extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
             ),
-            child: FlutterLogo(size: 100),
           ),
           SizedBox(height: 5.67),
           SizedBox(
@@ -109,7 +108,15 @@ class Developer extends StatelessWidget {
                             child: Container(
                               width: 395,
                               height: 588,
-                              child: FlutterLogo(size: 395),
+                              child: Container(
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/ft.png"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -119,7 +126,15 @@ class Developer extends StatelessWidget {
                             child: Container(
                               width: 400,
                               height: 400,
-                              child: FlutterLogo(size: 400),
+                              child: Container(
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/ft.png"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -128,25 +143,17 @@ class Developer extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  left: 200,
+                  left: 170,
                   top: 166,
                   child: Container(
-                    width: 80,
+                    width: 150,
                     height: 33,
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Container(
-                          width: 31.06,
-                          height: 33,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: FlutterLogo(size: 31.058822631835938),
-                        ),
-                        SizedBox(width: 17.88),
+                        Text("Bilgisayar müh."),
                         Container(
                           width: 31.06,
                           height: 33,
@@ -157,16 +164,7 @@ class Developer extends StatelessWidget {
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 30,
-                                height: 33,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: FlutterLogo(size: 32),
-                              ),
-                            ],
+                            children: [],
                           ),
                         ),
                       ],
@@ -213,52 +211,6 @@ class Developer extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  left: 205,
-                  top: 179,
-                  child: Container(
-                    width: 80,
-                    height: 33,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: 31.06,
-                          height: 33,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: FlutterLogo(size: 31.058822631835938),
-                        ),
-                        SizedBox(width: 17.88),
-                        Container(
-                          width: 31.06,
-                          height: 33,
-                          padding: const EdgeInsets.only(
-                            left: 1,
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 30,
-                                height: 33,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: FlutterLogo(size: 32),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Positioned(
                   left: 10,
                   top: 11,
                   child: Container(
@@ -266,36 +218,22 @@ class Developer extends StatelessWidget {
                     height: 229,
                     child: Stack(
                       children: [
-                        Container(
-                          width: 154,
-                          height: 229,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            border: Border.all(
-                              color: Colors.white,
-                              width: 2,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0x21bebebe),
-                                blurRadius: 9,
-                                offset: Offset(3, 3),
-                              ),
-                            ],
-                            gradient: LinearGradient(
-                              begin: Alignment.centerLeft,
-                              end: Alignment.centerRight,
-                              colors: [Color(0xff16a9fb), Color(0xff69dbff)],
-                            ),
-                          ),
-                        ),
+                        Text("Bilgisayar müh."),
                         Positioned.fill(
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Container(
                               width: 415,
                               height: 588,
-                              child: FlutterLogo(size: 395),
+                              child: Container(
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage("assets/hy.png"),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
@@ -319,17 +257,8 @@ class Developer extends StatelessWidget {
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          width: 440,
-                                          height: 400,
-                                          child: FlutterLogo(size: 400),
-                                        ),
-                                      ],
+                                      children: [],
                                     ),
-                                  ),
-                                  Positioned.fill(
-                                    child: FlutterLogo(size: 2702),
                                   ),
                                 ],
                               ),

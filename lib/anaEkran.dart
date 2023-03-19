@@ -84,20 +84,28 @@ class AnaEkran extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                     boxShadow: [
                       BoxShadow(
-                        color: Color(0x3f000000),
+                        // color: Color(0x3f000000),
                         blurRadius: 10,
                         offset: Offset(2, 2),
                       ),
                     ],
                   ),
-                  child: FlutterLogo(size: 198),
+                  child: Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/sl.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
                 ),
                 SizedBox(height: 42),
                 SizedBox(
                   width: 191,
                   height: 146,
                   child: Text(
-                    "Alan walker - Faded\nArtist - Alan walker\nLength - 3:10 mins\n\n",
+                    "Sıla - Faded\nArtist - Alan walker\nLength - 3:10 mins\n\n",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
