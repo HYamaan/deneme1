@@ -10,13 +10,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: DecoratedBox(
-          child: Center(child: LoginPage()),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
-          ),
-        ),
+        body: Center(child: LoginPage()),
       ),
     ),
   );
@@ -31,6 +25,10 @@ class LoginPage extends StatelessWidget {
     return Container(
       width: 395,
       height: 846,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+      ),
       // color: Color(0xff453a72),
       padding: const EdgeInsets.only(
         top: 2,
@@ -56,13 +54,13 @@ class LoginPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 195.54,
-                  height: 99.18,
+                  width: 295.54,
+                  height: 199.18,
                   child: Stack(
                     children: [
                       Container(
-                        width: 195.54,
-                        height: 99.18,
+                        width: 295.54,
+                        height: 199.18,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           // color: Colors.black,
@@ -72,12 +70,20 @@ class LoginPage extends StatelessWidget {
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: Container(
-                            width: 195.54,
-                            height: 99.18,
+                            width: 295.54,
+                            height: 199.18,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                             ),
-                            child: FlutterLogo(size: 99.17963409423828),
+                            child: Container(
+                              height: 200,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage("assets/music.png"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -108,166 +114,172 @@ class LoginPage extends StatelessWidget {
                 SizedBox(
                   width: 350,
                   height: 50,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      labelStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
-                      floatingLabelStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: Colors.blue,
-                        fontSize: 14,
-                      ),
-                      hintText: 'abcd@gmail.com',
-                      hintStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: const Color(0xFF7F7F7F),
-                        fontSize: 14,
-                      ),
-                      hintMaxLines: 1,
-                      errorStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: const Color(0xFFFF0000),
-                        fontSize: 12,
-                      ),
-                      errorMaxLines: 1,
-                      floatingLabelBehavior: FloatingLabelBehavior.always,
-                      isDense: true,
-                      contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 16),
-                      focusColor: Colors.blue,
-                      hoverColor: const Color(0x197F7F7F),
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color(0xFFFF0000),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        labelStyle: GoogleFonts.getFont(
+                          'Roboto',
+                          color: Colors.grey,
+                          fontSize: 14,
                         ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
+                        floatingLabelStyle: GoogleFonts.getFont(
+                          'Roboto',
                           color: Colors.blue,
-                          width: 1.5,
+                          fontSize: 14,
                         ),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color(0xFFFF0000),
+                        hintText: 'abcd@gmail.com',
+                        hintStyle: GoogleFonts.getFont(
+                          'Roboto',
+                          color: const Color(0xFF7F7F7F),
+                          fontSize: 14,
                         ),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color.fromARGB(24, 237, 231, 231),
+                        hintMaxLines: 1,
+                        errorStyle: GoogleFonts.getFont(
+                          'Roboto',
+                          color: const Color(0xFFFF0000),
+                          fontSize: 12,
                         ),
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color.fromARGB(128, 238, 232, 232),
-                          width: 1.5,
+                        errorMaxLines: 1,
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        isDense: true,
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 16),
+                        focusColor: Colors.blue,
+                        hoverColor: const Color(0x197F7F7F),
+                        errorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color(0xFFFF0000),
+                          ),
                         ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Colors.blue,
+                            width: 1.5,
+                          ),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color(0xFFFF0000),
+                          ),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color.fromARGB(24, 237, 231, 231),
+                          ),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color.fromARGB(128, 238, 232, 232),
+                            width: 1.5,
+                          ),
+                        ),
+                        alignLabelWithHint: true,
                       ),
-                      alignLabelWithHint: true,
+                      keyboardType: TextInputType.text,
+                      style: GoogleFonts.getFont(
+                        'Roboto',
+                        color: Colors.black,
+                        fontSize: 14,
+                      ),
+                      textAlign: TextAlign.left,
+                      autocorrect: false,
+                      cursorHeight: 14,
+                      cursorRadius: const Radius.circular(2),
+                      cursorColor: const Color(0xFF5C69E5),
                     ),
-                    keyboardType: TextInputType.text,
-                    style: GoogleFonts.getFont(
-                      'Roboto',
-                      color: Colors.black,
-                      fontSize: 14,
-                    ),
-                    textAlign: TextAlign.left,
-                    autocorrect: false,
-                    cursorHeight: 14,
-                    cursorRadius: const Radius.circular(2),
-                    cursorColor: const Color(0xFF5C69E5),
                   ),
                 ),
                 SizedBox(height: 20.82),
                 SizedBox(
                   width: 350,
                   height: 50,
-                  child: TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      labelStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: Colors.grey,
-                        fontSize: 14,
-                      ),
-                      floatingLabelStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: Colors.blue,
-                        fontSize: 14,
-                      ),
-                      hintText: '*******',
-                      hintStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: const Color(0xFF7F7F7F),
-                        fontSize: 14,
-                      ),
-                      hintMaxLines: 1,
-                      errorStyle: GoogleFonts.getFont(
-                        'Roboto',
-                        color: const Color(0xFFFF0000),
-                        fontSize: 12,
-                      ),
-                      errorMaxLines: 1,
-                      floatingLabelBehavior: FloatingLabelBehavior.always,
-                      isDense: true,
-                      contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 16),
-                      focusColor: Colors.blue,
-                      hoverColor: const Color(0x197F7F7F),
-                      errorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color(0xFFFF0000),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        labelStyle: GoogleFonts.getFont(
+                          'Roboto',
+                          color: Colors.grey,
+                          fontSize: 14,
                         ),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
+                        floatingLabelStyle: GoogleFonts.getFont(
+                          'Roboto',
                           color: Colors.blue,
-                          width: 1.5,
+                          fontSize: 14,
                         ),
-                      ),
-                      focusedErrorBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color(0xFFFF0000),
+                        hintText: '*******',
+                        hintStyle: GoogleFonts.getFont(
+                          'Roboto',
+                          color: const Color(0xFF7F7F7F),
+                          fontSize: 14,
                         ),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color(0x197F7F7F),
+                        hintMaxLines: 1,
+                        errorStyle: GoogleFonts.getFont(
+                          'Roboto',
+                          color: const Color(0xFFFF0000),
+                          fontSize: 12,
                         ),
-                      ),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4.0),
-                        borderSide: const BorderSide(
-                          color: Color(0x809E9E9E),
-                          width: 1.5,
+                        errorMaxLines: 1,
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        isDense: true,
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 16),
+                        focusColor: Colors.blue,
+                        hoverColor: const Color(0x197F7F7F),
+                        errorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color(0xFFFF0000),
+                          ),
                         ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Colors.blue,
+                            width: 1.5,
+                          ),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color(0xFFFF0000),
+                          ),
+                        ),
+                        disabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color(0x197F7F7F),
+                          ),
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4.0),
+                          borderSide: const BorderSide(
+                            color: Color(0x809E9E9E),
+                            width: 1.5,
+                          ),
+                        ),
+                        alignLabelWithHint: true,
                       ),
-                      alignLabelWithHint: true,
+                      keyboardType: TextInputType.text,
+                      style: GoogleFonts.getFont(
+                        'Roboto',
+                        color: Colors.black,
+                        fontSize: 14,
+                      ),
+                      textAlign: TextAlign.left,
+                      autocorrect: false,
+                      cursorHeight: 14,
+                      cursorRadius: const Radius.circular(2),
+                      cursorColor: const Color(0xFF5C69E5),
                     ),
-                    keyboardType: TextInputType.text,
-                    style: GoogleFonts.getFont(
-                      'Roboto',
-                      color: Colors.black,
-                      fontSize: 14,
-                    ),
-                    textAlign: TextAlign.left,
-                    autocorrect: false,
-                    cursorHeight: 14,
-                    cursorRadius: const Radius.circular(2),
-                    cursorColor: const Color(0xFF5C69E5),
                   ),
                 ),
 
@@ -283,13 +295,16 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        "Remember me",
-                        style: TextStyle(
-                          color: Color(0xfff8f1f1),
-                          fontSize: 14,
-                          fontFamily: "Roboto",
-                          fontWeight: FontWeight.w300,
+                      Material(
+                        color: Colors.transparent,
+                        child: Text(
+                          "Remember me",
+                          style: TextStyle(
+                            color: Color(0xfff8f1f1),
+                            fontSize: 14,
+                            fontFamily: "Roboto",
+                            fontWeight: FontWeight.w300,
+                          ),
                         ),
                       ),
                     ],
@@ -367,37 +382,51 @@ class LoginPage extends StatelessWidget {
                       ),
                       Container(
                         margin: const EdgeInsets.only(left: 10.0, right: 30.0),
-                        child: Text(
-                          "Dont have an account?",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
+                        child: Material(
+                          color: Colors.transparent,
+                          child: Text(
+                            "Dont have an account?",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 13,
+                            ),
                           ),
                         ),
                       ),
                       Container(
                         width: 108.68,
                         height: 107.65,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                        ),
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                  builder: (context) => LoginPage()),
+                              MaterialPageRoute(builder: (context) => SignUp()),
                             );
                           },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.transparent,
+                            foregroundColor: Colors.transparent,
+                            elevation: 0,
+                          ),
                           child: SizedBox(
-                            //width: 43.54,
-                            //height: 17.91,
-
-                            child: Text(
-                              "sign up",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                backgroundColor: Colors.purple,
+                            width: 308.68,
+                            height: 107.65,
+                            child: Material(
+                              color: Colors.purple,
+                              child: FittedBox(
+                                fit: BoxFit.contain,
+                                child: Text(
+                                  "sign up",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
