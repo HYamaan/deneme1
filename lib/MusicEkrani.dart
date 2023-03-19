@@ -7,16 +7,9 @@ import 'developer.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: Scaffold(
-        body: DecoratedBox(
-          child: Center(child: MusicEkrani()),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
-          ),
-        ),
-      ),
-    ),
+        home: Scaffold(
+      body: Center(child: MusicEkrani()),
+    )),
   );
 }
 
@@ -29,6 +22,10 @@ class MusicEkrani extends StatelessWidget {
     return Container(
       width: 390,
       height: 834,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+      ),
       // color: Color(0xff30254e),
       padding: const EdgeInsets.symmetric(
         horizontal: 14,

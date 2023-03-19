@@ -29,35 +29,6 @@ class Welcome extends StatelessWidget {
       //color: Colors.white,
       child: Stack(
         children: [
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.topLeft,
-              child: Container(
-                width: 459,
-                height: 881,
-                //    color: Color(0xff65268b),
-                padding: const EdgeInsets.only(
-                  right: 22,
-                  bottom: 37,
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      width: 360,
-                      height: 844,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: FlutterLogo(size: 437),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
           Positioned(
             left: 54,
             top: 476,
@@ -69,23 +40,29 @@ class Welcome extends StatelessWidget {
                 SizedBox(
                   width: 159,
                   height: 36,
-                  child: Text(
-                    "Welcome",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xfff9ebeb),
-                      fontSize: 36,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Welcome",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xfff9ebeb),
+                        fontSize: 36,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 24),
                 SizedBox(
-                  width: 299,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                  width: 289,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),

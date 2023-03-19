@@ -70,23 +70,29 @@ class Collab extends StatelessWidget {
                 SizedBox(
                   width: 159,
                   height: 36,
-                  child: Text(
-                    "Collab",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xfff9ebeb),
-                      fontSize: 36,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Collab",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xfff9ebeb),
+                        fontSize: 36,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 24),
                 SizedBox(
                   width: 299,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
