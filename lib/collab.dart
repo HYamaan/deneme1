@@ -8,13 +8,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: DecoratedBox(
-          child: Center(child: Collab()),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
-          ),
-        ),
+        body: Center(child: Collab()),
       ),
     ),
   );
@@ -29,6 +23,10 @@ class Collab extends StatelessWidget {
     return Container(
       width: 422,
       height: 840,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+      ),
       //  color: Colors.white,
       child: Stack(
         children: [
@@ -72,23 +70,29 @@ class Collab extends StatelessWidget {
                 SizedBox(
                   width: 159,
                   height: 36,
-                  child: Text(
-                    "Collab",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xfff9ebeb),
-                      fontSize: 36,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Collab",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xfff9ebeb),
+                        fontSize: 36,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 24),
                 SizedBox(
                   width: 299,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -238,6 +242,11 @@ class Collab extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => AnaEkran()),
                 );
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent,
+                foregroundColor: Colors.transparent,
+                elevation: 0,
+              ),
               child: SizedBox(
                 //width: 43.54,
                 //height: 17.91,
@@ -248,7 +257,6 @@ class Collab extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
-                    backgroundColor: Colors.purple,
                   ),
                 ),
               ),

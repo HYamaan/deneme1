@@ -9,13 +9,7 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: DecoratedBox(
-          child: Center(child: FindProduct()),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
-          ),
-        ),
+        body: Center(child: FindProduct()),
       ),
     ),
   );
@@ -30,7 +24,10 @@ class FindProduct extends StatelessWidget {
     return Container(
       width: 422,
       height: 840,
-      //  color: Colors.white,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+      ),
       child: Stack(
         children: [
           Positioned.fill(
@@ -73,23 +70,29 @@ class FindProduct extends StatelessWidget {
                 SizedBox(
                   width: 350,
                   height: 36,
-                  child: Text(
-                    "Find Products",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xfff9ebeb),
-                      fontSize: 36,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Find Products",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xfff9ebeb),
+                        fontSize: 36,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 24),
                 SizedBox(
                   width: 299,
-                  child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -239,6 +242,11 @@ class FindProduct extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => AnaEkran()),
                 );
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent,
+                foregroundColor: Colors.transparent,
+                elevation: 0,
+              ),
               child: SizedBox(
                 //width: 43.54,
                 //height: 17.91,
@@ -249,7 +257,6 @@ class FindProduct extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
-                    backgroundColor: Colors.purple,
                   ),
                 ),
               ),

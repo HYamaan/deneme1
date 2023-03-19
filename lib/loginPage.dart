@@ -9,13 +9,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: DecoratedBox(
-          child: Center(child: SignUp()),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
-          ),
-        ),
+        body: Center(child: SignUp()),
       ),
     ),
   );
@@ -30,6 +24,10 @@ class SignUp extends StatelessWidget {
     return Container(
       width: 390,
       height: 844,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+            image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+      ),
       //olor: Color(0xff453a72),
       padding: const EdgeInsets.only(
         left: 14,
@@ -57,14 +55,17 @@ class SignUp extends StatelessWidget {
           ),
           SizedBox(height: 21.14),
           SizedBox(
-            width: 164,
+            width: 144,
             height: 48,
-            child: Text(
-              "Sign Up",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color(0xff7b34fe),
-                fontSize: 40,
+            child: Material(
+              color: Colors.transparent,
+              child: Text(
+                "Sign Up",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xff7b34fe),
+                  fontSize: 40,
+                ),
               ),
             ),
           ),
@@ -72,261 +73,270 @@ class SignUp extends StatelessWidget {
           SizedBox(
             width: 350,
             height: 50,
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                labelStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: Colors.grey,
-                  fontSize: 14,
-                ),
-                floatingLabelStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: Colors.blue,
-                  fontSize: 14,
-                ),
-                hintText: 'abcd@gmail.com',
-                hintStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: const Color(0xFF7F7F7F),
-                  fontSize: 14,
-                ),
-                hintMaxLines: 1,
-                errorStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: const Color(0xFFFF0000),
-                  fontSize: 12,
-                ),
-                errorMaxLines: 1,
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                isDense: true,
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-                focusColor: Colors.blue,
-                hoverColor: const Color(0x197F7F7F),
-                errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0xFFFF0000),
+            child: Material(
+              color: Colors.transparent,
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Your Password',
+                  labelStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: Colors.grey,
+                    fontSize: 14,
                   ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
+                  floatingLabelStyle: GoogleFonts.getFont(
+                    'Roboto',
                     color: Colors.blue,
-                    width: 1.5,
+                    fontSize: 14,
                   ),
-                ),
-                focusedErrorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0xFFFF0000),
+                  hintText: 'XXX XXX XXX',
+                  hintStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: const Color(0xFF7F7F7F),
+                    fontSize: 14,
                   ),
-                ),
-                disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0x197F7F7F),
+                  hintMaxLines: 1,
+                  errorStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: const Color(0xFFFF0000),
+                    fontSize: 12,
                   ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0x809E9E9E),
-                    width: 1.5,
+                  errorMaxLines: 1,
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  isDense: true,
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                  focusColor: Colors.blue,
+                  hoverColor: const Color(0x197F7F7F),
+                  errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0xFFFF0000),
+                    ),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.5,
+                    ),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0xFFFF0000),
+                    ),
+                  ),
+                  disabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0x197F7F7F),
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0x809E9E9E),
+                      width: 1.5,
+                    ),
+                  ),
+                  alignLabelWithHint: true,
                 ),
-                alignLabelWithHint: true,
+                keyboardType: TextInputType.text,
+                style: GoogleFonts.getFont(
+                  'Roboto',
+                  color: Colors.black,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.left,
+                autocorrect: false,
+                cursorHeight: 14,
+                cursorRadius: const Radius.circular(2),
+                cursorColor: const Color(0xFF5C69E5),
               ),
-              keyboardType: TextInputType.text,
-              style: GoogleFonts.getFont(
-                'Roboto',
-                color: Colors.black,
-                fontSize: 14,
-              ),
-              textAlign: TextAlign.left,
-              autocorrect: false,
-              cursorHeight: 14,
-              cursorRadius: const Radius.circular(2),
-              cursorColor: const Color(0xFF5C69E5),
             ),
           ),
           SizedBox(height: 21.14),
           SizedBox(
             width: 350,
             height: 50,
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Your Name',
-                labelStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: Colors.grey,
-                  fontSize: 14,
-                ),
-                floatingLabelStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: Colors.blue,
-                  fontSize: 14,
-                ),
-                hintText: 'XXX XXX XXX',
-                hintStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: const Color(0xFF7F7F7F),
-                  fontSize: 14,
-                ),
-                hintMaxLines: 1,
-                errorStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: const Color(0xFFFF0000),
-                  fontSize: 12,
-                ),
-                errorMaxLines: 1,
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                isDense: true,
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-                focusColor: Colors.blue,
-                hoverColor: const Color(0x197F7F7F),
-                errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0xFFFF0000),
+            child: Material(
+              color: Colors.transparent,
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Your Name',
+                  labelStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: Colors.grey,
+                    fontSize: 14,
                   ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
+                  floatingLabelStyle: GoogleFonts.getFont(
+                    'Roboto',
                     color: Colors.blue,
-                    width: 1.5,
+                    fontSize: 14,
                   ),
-                ),
-                focusedErrorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0xFFFF0000),
+                  hintText: 'XXX XXX XXX',
+                  hintStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: const Color(0xFF7F7F7F),
+                    fontSize: 14,
                   ),
-                ),
-                disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0x197F7F7F),
+                  hintMaxLines: 1,
+                  errorStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: const Color(0xFFFF0000),
+                    fontSize: 12,
                   ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0x809E9E9E),
-                    width: 1.5,
+                  errorMaxLines: 1,
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  isDense: true,
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                  focusColor: Colors.blue,
+                  hoverColor: const Color(0x197F7F7F),
+                  errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0xFFFF0000),
+                    ),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.5,
+                    ),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0xFFFF0000),
+                    ),
+                  ),
+                  disabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0x197F7F7F),
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0x809E9E9E),
+                      width: 1.5,
+                    ),
+                  ),
+                  alignLabelWithHint: true,
                 ),
-                alignLabelWithHint: true,
+                keyboardType: TextInputType.text,
+                style: GoogleFonts.getFont(
+                  'Roboto',
+                  color: Colors.black,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.left,
+                autocorrect: false,
+                cursorHeight: 14,
+                cursorRadius: const Radius.circular(2),
+                cursorColor: const Color(0xFF5C69E5),
               ),
-              keyboardType: TextInputType.text,
-              style: GoogleFonts.getFont(
-                'Roboto',
-                color: Colors.black,
-                fontSize: 14,
-              ),
-              textAlign: TextAlign.left,
-              autocorrect: false,
-              cursorHeight: 14,
-              cursorRadius: const Radius.circular(2),
-              cursorColor: const Color(0xFF5C69E5),
             ),
           ),
           SizedBox(height: 21.14),
           SizedBox(
             width: 350,
             height: 50,
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: 'Your Password',
-                labelStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: Colors.grey,
-                  fontSize: 14,
-                ),
-                floatingLabelStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: Colors.blue,
-                  fontSize: 14,
-                ),
-                hintText: 'XXX XXX XXX',
-                hintStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: const Color(0xFF7F7F7F),
-                  fontSize: 14,
-                ),
-                hintMaxLines: 1,
-                errorStyle: GoogleFonts.getFont(
-                  'Roboto',
-                  color: const Color(0xFFFF0000),
-                  fontSize: 12,
-                ),
-                errorMaxLines: 1,
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                isDense: true,
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-                focusColor: Colors.blue,
-                hoverColor: const Color(0x197F7F7F),
-                errorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0xFFFF0000),
+            child: Material(
+              color: Colors.transparent,
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: 'Your Password',
+                  labelStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: Colors.grey,
+                    fontSize: 14,
                   ),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
+                  floatingLabelStyle: GoogleFonts.getFont(
+                    'Roboto',
                     color: Colors.blue,
-                    width: 1.5,
+                    fontSize: 14,
                   ),
-                ),
-                focusedErrorBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0xFFFF0000),
+                  hintText: 'XXX XXX XXX',
+                  hintStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: const Color(0xFF7F7F7F),
+                    fontSize: 14,
                   ),
-                ),
-                disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0x197F7F7F),
+                  hintMaxLines: 1,
+                  errorStyle: GoogleFonts.getFont(
+                    'Roboto',
+                    color: const Color(0xFFFF0000),
+                    fontSize: 12,
                   ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(4.0),
-                  borderSide: const BorderSide(
-                    color: Color(0x809E9E9E),
-                    width: 1.5,
+                  errorMaxLines: 1,
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  isDense: true,
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                  focusColor: Colors.blue,
+                  hoverColor: const Color(0x197F7F7F),
+                  errorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0xFFFF0000),
+                    ),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.5,
+                    ),
+                  ),
+                  focusedErrorBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0xFFFF0000),
+                    ),
+                  ),
+                  disabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0x197F7F7F),
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(4.0),
+                    borderSide: const BorderSide(
+                      color: Color(0x809E9E9E),
+                      width: 1.5,
+                    ),
+                  ),
+                  alignLabelWithHint: true,
                 ),
-                alignLabelWithHint: true,
+                keyboardType: TextInputType.text,
+                style: GoogleFonts.getFont(
+                  'Roboto',
+                  color: Colors.black,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.left,
+                autocorrect: false,
+                cursorHeight: 14,
+                cursorRadius: const Radius.circular(2),
+                cursorColor: const Color(0xFF5C69E5),
               ),
-              keyboardType: TextInputType.text,
-              style: GoogleFonts.getFont(
-                'Roboto',
-                color: Colors.black,
-                fontSize: 14,
-              ),
-              textAlign: TextAlign.left,
-              autocorrect: false,
-              cursorHeight: 14,
-              cursorRadius: const Radius.circular(2),
-              cursorColor: const Color(0xFF5C69E5),
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(left: 138, right: 123, top: 100),
+            padding: const EdgeInsets.only(top: 100),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 84,
-                  height: 36,
+                  width: 343,
+                  height: 56,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
@@ -351,7 +361,7 @@ class SignUp extends StatelessWidget {
                       elevation: 2,
                     ),
                     child: const Text(
-                      'Button',
+                      'Sign Up',
                       textAlign: TextAlign.center,
                     ),
                   ),
