@@ -8,7 +8,13 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Center(child: Collab()),
+        body: DecoratedBox(
+          child: Center(child: Collab()),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+          ),
+        ),
       ),
     ),
   );
@@ -23,7 +29,7 @@ class Collab extends StatelessWidget {
     return Container(
       width: 422,
       height: 840,
-      color: Colors.white,
+      //  color: Colors.white,
       child: Stack(
         children: [
           Positioned.fill(
@@ -32,7 +38,7 @@ class Collab extends StatelessWidget {
               child: Container(
                 width: 459,
                 height: 881,
-                color: Color(0xff65268b),
+                //        color: Color(0xff65268b),
                 padding: const EdgeInsets.only(
                   right: 22,
                   bottom: 37,
@@ -48,7 +54,7 @@ class Collab extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: FlutterLogo(size: 437),
+                      // child: FlutterLogo(size: 437),
                     ),
                   ],
                 ),
@@ -225,15 +231,25 @@ class Collab extends StatelessWidget {
           Positioned(
             left: 332.75,
             top: 44.79,
-            child: SizedBox(
-              width: 43.54,
-              height: 17.91,
-              child: Text(
-                "Skip",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AnaEkran()),
+                );
+              },
+              child: SizedBox(
+                //width: 43.54,
+                //height: 17.91,
+
+                child: Text(
+                  "Skip",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    backgroundColor: Colors.purple,
+                  ),
                 ),
               ),
             ),

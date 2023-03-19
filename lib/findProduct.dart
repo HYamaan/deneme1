@@ -1,6 +1,7 @@
 // Tip: tap on the down arrow to format the code.
 
 import 'package:flutter/material.dart';
+import 'anaEkran.dart';
 import 'collab.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,7 +9,13 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Center(child: FindProduct()),
+        body: DecoratedBox(
+          child: Center(child: FindProduct()),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+          ),
+        ),
       ),
     ),
   );
@@ -23,7 +30,7 @@ class FindProduct extends StatelessWidget {
     return Container(
       width: 422,
       height: 840,
-      color: Colors.white,
+      //  color: Colors.white,
       child: Stack(
         children: [
           Positioned.fill(
@@ -32,7 +39,7 @@ class FindProduct extends StatelessWidget {
               child: Container(
                 width: 459,
                 height: 881,
-                color: Color(0xff65268b),
+                //   color: Color(0xff65268b),
                 padding: const EdgeInsets.only(
                   right: 22,
                   bottom: 37,
@@ -48,7 +55,7 @@ class FindProduct extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: FlutterLogo(size: 437),
+                      // child: FlutterLogo(size: 437),
                     ),
                   ],
                 ),
@@ -225,15 +232,25 @@ class FindProduct extends StatelessWidget {
           Positioned(
             left: 332.75,
             top: 44.79,
-            child: SizedBox(
-              width: 43.54,
-              height: 17.91,
-              child: Text(
-                "Skip",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AnaEkran()),
+                );
+              },
+              child: SizedBox(
+                //width: 43.54,
+                //height: 17.91,
+
+                child: Text(
+                  "Skip",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    backgroundColor: Colors.purple,
+                  ),
                 ),
               ),
             ),

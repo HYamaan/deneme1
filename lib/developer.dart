@@ -159,7 +159,7 @@ class Developer extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: 32,
+                                width: 30,
                                 height: 33,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
@@ -244,7 +244,7 @@ class Developer extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: 32,
+                                width: 30,
                                 height: 33,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
@@ -293,7 +293,7 @@ class Developer extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Container(
-                              width: 395,
+                              width: 415,
                               height: 588,
                               child: FlutterLogo(size: 395),
                             ),
@@ -303,7 +303,7 @@ class Developer extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Container(
-                              width: 2702,
+                              width: 2802,
                               height: 2940,
                               padding: const EdgeInsets.only(
                                 left: 1175,
@@ -321,7 +321,7 @@ class Developer extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          width: 400,
+                                          width: 440,
                                           height: 400,
                                           child: FlutterLogo(size: 400),
                                         ),

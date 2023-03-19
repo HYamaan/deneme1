@@ -8,7 +8,13 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Center(child: MusicEkrani()),
+        body: DecoratedBox(
+          child: Center(child: MusicEkrani()),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+          ),
+        ),
       ),
     ),
   );
@@ -23,7 +29,7 @@ class MusicEkrani extends StatelessWidget {
     return Container(
       width: 390,
       height: 834,
-      color: Color(0xff30254e),
+      // color: Color(0xff30254e),
       padding: const EdgeInsets.symmetric(
         horizontal: 14,
       ),
@@ -33,7 +39,7 @@ class MusicEkrani extends StatelessWidget {
             Container(
                 height: 90,
                 child: AppBar(
-                  backgroundColor: Colors.transparent,
+                  //      backgroundColor: Colors.transparent,
                   iconTheme: IconThemeData(
                     color: Colors.white, // <-- SEE HERE
                   ),

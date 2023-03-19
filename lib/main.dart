@@ -10,7 +10,13 @@ void main() {
     MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: Center(child: LoginPage()),
+        body: DecoratedBox(
+          child: Center(child: LoginPage()),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+          ),
+        ),
       ),
     ),
   );
@@ -25,7 +31,7 @@ class LoginPage extends StatelessWidget {
     return Container(
       width: 395,
       height: 846,
-      color: Color(0xff453a72),
+      // color: Color(0xff453a72),
       padding: const EdgeInsets.only(
         top: 2,
       ),
@@ -37,7 +43,7 @@ class LoginPage extends StatelessWidget {
           Container(
             width: 390,
             height: 844,
-            color: Color(0xff272727),
+            // color: Color(0xff272727),
             padding: const EdgeInsets.only(
               left: 19,
               right: 20,
@@ -59,7 +65,7 @@ class LoginPage extends StatelessWidget {
                         height: 99.18,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
-                          color: Colors.black,
+                          // color: Colors.black,
                         ),
                       ),
                       Positioned.fill(
@@ -156,13 +162,13 @@ class LoginPage extends StatelessWidget {
                       disabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(4.0),
                         borderSide: const BorderSide(
-                          color: Color(0x197F7F7F),
+                          color: Color.fromARGB(24, 237, 231, 231),
                         ),
                       ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(4.0),
                         borderSide: const BorderSide(
-                          color: Color(0x809E9E9E),
+                          color: Color.fromARGB(128, 238, 232, 232),
                           width: 1.5,
                         ),
                       ),
@@ -373,19 +379,26 @@ class LoginPage extends StatelessWidget {
                       Container(
                         width: 108.68,
                         height: 107.65,
-                        child: TextButton(
+                        child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SignUp()),
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()),
                             );
                           },
-                          child: Text(
-                            "Sign Up",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xffdd1b60),
-                              fontSize: 22,
+                          child: SizedBox(
+                            //width: 43.54,
+                            //height: 17.91,
+
+                            child: Text(
+                              "sign up",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                backgroundColor: Colors.purple,
+                              ),
                             ),
                           ),
                         ),

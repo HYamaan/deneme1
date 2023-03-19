@@ -9,7 +9,13 @@ void main() {
     MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: Center(child: SignUp()),
+        body: DecoratedBox(
+          child: Center(child: SignUp()),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/b1.png"), fit: BoxFit.cover),
+          ),
+        ),
       ),
     ),
   );
@@ -24,7 +30,7 @@ class SignUp extends StatelessWidget {
     return Container(
       width: 390,
       height: 844,
-      color: Color(0xff453a72),
+      //olor: Color(0xff453a72),
       padding: const EdgeInsets.only(
         left: 14,
         right: 31,
@@ -51,7 +57,7 @@ class SignUp extends StatelessWidget {
           ),
           SizedBox(height: 21.14),
           SizedBox(
-            width: 143,
+            width: 164,
             height: 48,
             child: Text(
               "Sign Up",
