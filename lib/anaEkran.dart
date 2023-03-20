@@ -104,11 +104,14 @@ class AnaEkran extends StatelessWidget {
                 SizedBox(
                   width: 191,
                   height: 146,
-                  child: Text(
-                    "Sıla - Faded\nArtist - Alan walker\nLength - 3:10 mins\n\n",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Sıla - gözlerine teslimim",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -264,7 +267,6 @@ class AnaEkran extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: FlutterLogo(size: 27),
                       ),
                     ],
                   ),

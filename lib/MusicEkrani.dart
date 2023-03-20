@@ -36,7 +36,7 @@ class MusicEkrani extends StatelessWidget {
             Container(
                 height: 90,
                 child: AppBar(
-                  //      backgroundColor: Colors.transparent,
+                  backgroundColor: Colors.transparent,
                   iconTheme: IconThemeData(
                     color: Colors.white, // <-- SEE HERE
                   ),
@@ -128,7 +128,6 @@ class MusicEkrani extends StatelessWidget {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
                               ),
-                              child: FlutterLogo(size: 1.5032680034637451),
                             ),
                           ],
                         ),
@@ -178,8 +177,15 @@ class MusicEkrani extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
-                                    child:
-                                        FlutterLogo(size: 54.117645263671875),
+                                    child: Container(
+                                      height: 200,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage("assets/sl.png"),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(width: 6.76),
                                   Column(
@@ -191,7 +197,7 @@ class MusicEkrani extends StatelessWidget {
                                       Material(
                                           color: Colors.transparent,
                                           child: Text(
-                                            "zinoleesky",
+                                            "sıla",
                                             style: TextStyle(
                                               fontSize: 20,
                                             ),
@@ -199,7 +205,7 @@ class MusicEkrani extends StatelessWidget {
                                       Material(
                                         color: Colors.transparent,
                                         child: Text(
-                                          "call of duty",
+                                          "Saki            ",
                                           style: TextStyle(
                                             color: Color(0xffe0e0e0),
                                             fontSize: 20,
@@ -227,7 +233,7 @@ class MusicEkrani extends StatelessWidget {
                       ),
                       SizedBox(height: 12.86),
                       Container(
-                        width: 344.50,
+                        width: 334.50,
                         height: 0,
                         decoration: BoxDecoration(
                           border: Border.all(
@@ -241,7 +247,7 @@ class MusicEkrani extends StatelessWidget {
                 ),
                 SizedBox(height: 29),
                 Container(
-                  width: 345,
+                  width: 334,
                   height: 90,
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -249,7 +255,7 @@ class MusicEkrani extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        width: 304.87,
+                        width: 334.87,
                         height: 77.14,
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -270,8 +276,15 @@ class MusicEkrani extends StatelessWidget {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                     ),
-                                    child:
-                                        FlutterLogo(size: 54.117645263671875),
+                                    child: Container(
+                                      height: 200,
+                                      decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage("assets/sl.png"),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(width: 6.76),
                                   Column(
@@ -283,7 +296,7 @@ class MusicEkrani extends StatelessWidget {
                                       Material(
                                           color: Colors.transparent,
                                           child: Text(
-                                            "zinoleesky",
+                                            "Sıla",
                                             style: TextStyle(
                                               fontSize: 20,
                                             ),
@@ -291,7 +304,7 @@ class MusicEkrani extends StatelessWidget {
                                       Material(
                                         color: Colors.transparent,
                                         child: Text(
-                                          "call of duty",
+                                          "Belalım        ",
                                           style: TextStyle(
                                             color: Color(0xffe0e0e0),
                                             fontSize: 20,
