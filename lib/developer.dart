@@ -41,7 +41,7 @@ class Developer extends StatelessWidget {
           ),
           SizedBox(height: 5.67),
           SizedBox(
-            width: 206,
+            width: 256,
             child: Text(
               "Developer",
               style: TextStyle(
@@ -80,7 +80,7 @@ class Developer extends StatelessWidget {
                     child: Stack(
                       children: [
                         Container(
-                          width: 154,
+                          width: 184,
                           height: 229,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
@@ -106,7 +106,7 @@ class Developer extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Container(
-                              width: 395,
+                              width: 415,
                               height: 588,
                               child: Container(
                                 height: 200,
@@ -124,7 +124,7 @@ class Developer extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Container(
-                              width: 400,
+                              width: 415,
                               height: 400,
                               child: Container(
                                 height: 200,
@@ -146,16 +146,15 @@ class Developer extends StatelessWidget {
                   left: 170,
                   top: 166,
                   child: Container(
-                    width: 150,
+                    width: 450,
                     height: 33,
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Bilgisayar müh."),
                         Container(
-                          width: 31.06,
+                          width: 361.06,
                           height: 33,
                           padding: const EdgeInsets.only(
                             left: 1,
@@ -175,7 +174,7 @@ class Developer extends StatelessWidget {
                   left: 191,
                   top: 38,
                   child: SizedBox(
-                    width: 134,
+                    width: 454,
                     height: 88,
                     child: Text(
                       "Ferhat\nToson ",
@@ -218,7 +217,6 @@ class Developer extends StatelessWidget {
                     height: 229,
                     child: Stack(
                       children: [
-                        Text("Bilgisayar müh."),
                         Positioned.fill(
                           child: Align(
                             alignment: Alignment.bottomLeft,
