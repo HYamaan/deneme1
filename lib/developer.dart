@@ -42,11 +42,14 @@ class Developer extends StatelessWidget {
           SizedBox(height: 5.67),
           SizedBox(
             width: 256,
-            child: Text(
-              "Developer",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 41,
+            child: Material(
+              color: Colors.transparent,
+              child: Text(
+                "Developer",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 41,
+                ),
               ),
             ),
           ),
@@ -176,11 +179,14 @@ class Developer extends StatelessWidget {
                   child: SizedBox(
                     width: 454,
                     height: 88,
-                    child: Text(
-                      "Ferhat\nToson ",
-                      style: TextStyle(
-                        color: Color(0xff838d95),
-                        fontSize: 40,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: Text(
+                        "Ferhat\nToson ",
+                        style: TextStyle(
+                          color: Color(0xff838d95),
+                          fontSize: 40,
+                        ),
                       ),
                     ),
                   ),
@@ -191,7 +197,7 @@ class Developer extends StatelessWidget {
           SizedBox(height: 5.67),
           Container(
             width: 335,
-            height: 250,
+            height: 234,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
@@ -239,7 +245,7 @@ class Developer extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Container(
-                              width: 2802,
+                              width: 1167,
                               height: 2940,
                               padding: const EdgeInsets.only(
                                 left: 1175,
@@ -270,11 +276,14 @@ class Developer extends StatelessWidget {
                 Positioned(
                   left: 187,
                   top: 35,
-                  child: Text(
-                    "Hakan \nYaman",
-                    style: TextStyle(
-                      color: Color(0xff838d95),
-                      fontSize: 41,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      "Hakan \nYaman",
+                      style: TextStyle(
+                        color: Color(0xff838d95),
+                        fontSize: 41,
+                      ),
                     ),
                   ),
                 ),
