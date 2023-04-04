@@ -1,11 +1,18 @@
 // Tip: tap on the down arrow to format the code.
 // merhaba hakan
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'auth.dart';
+import 'firebase_options.dart';
 import 'welcome.dart';
 import 'loginPage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MaterialApp(
       home: Scaffold(
@@ -16,7 +23,11 @@ void main() {
   );
 }
 
+
 class LoginPage extends StatelessWidget {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  AuthService _authService = AuthService();
   @override
   Widget build(BuildContext context) {
     // Paste it here.
@@ -117,6 +128,7 @@ class LoginPage extends StatelessWidget {
                   child: Material(
                     color: Colors.transparent,
                     child: TextField(
+                      controller: _emailController,
                       decoration: InputDecoration(
                         labelText: 'Email',
                         labelStyle: GoogleFonts.getFont(
@@ -203,6 +215,7 @@ class LoginPage extends StatelessWidget {
                   child: Material(
                     color: Colors.transparent,
                     child: TextField(
+                      controller: _passwordController,
                       decoration: InputDecoration(
                         labelText: 'Password',
                         labelStyle: GoogleFonts.getFont(
@@ -327,11 +340,15 @@ class LoginPage extends StatelessWidget {
                         height: 36,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Welcome()),
-                            );
+                            _authService
+                                .signIn(
+                                _emailController.text, _passwordController.text)
+                                .then((value) {
+                              return Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Welcome()));
+                            });
                           },
                           style: ElevatedButton.styleFrom(
                             shadowColor: const Color(0xFFA5A5A5),
